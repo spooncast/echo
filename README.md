@@ -79,10 +79,9 @@ export STAT_WEB_ENABLED=1
 
 run.sh example
 ```
-source echo.env
-
-cargo run
+Please see './scripts/run.sh'
 ```
+
 
 ## Testing
 
