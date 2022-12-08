@@ -109,6 +109,7 @@ cd scripts/echo-client
 ```
 
 ### Send RTMP
+This test requires ffmpeg to be installed. Please check the script contents.
 ```
 ./echo-publish.sh -r 127.0.0.1 demo clip.aac 
 ```
