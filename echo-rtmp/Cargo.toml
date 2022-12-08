@@ -1,0 +1,24 @@
+[package]
+name = "echo-rtmp"
+version = "2.4.0"
+authors = ["Spoon Radio <simon@spoonradio.co>"]
+edition = "2018"
+
+[dependencies]
+bytes = "^0.5"
+rml_rtmp = "^0.3"
+thiserror = "^1.0"
+anyhow = "^1.0"
+log = "^0.4"
+serde = { version = "^1.0" ,  features = ["derive"] }
+futures = "0.3.5"
+tokio-util = { version = "0.3.1" ,  features = ["codec"] }
+
+echo-types = { version = "2.4.0" ,  path = "../echo-types" }
+echo-core = { version = "2.4.0" ,  path = "../echo-core" }
+echo-codec = { version = "2.4.0" ,  path = "../echo-codec" }
+
+[dependencies.tokio]
+version = "0.2.21"
+default-features = false
+features = ["rt-core" ,  "stream" ,  "sync" ,  "time" ,  "tcp"]

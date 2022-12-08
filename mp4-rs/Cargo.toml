@@ -1,0 +1,21 @@
+[package]
+name = "mp4-rs"
+version = "0.4.3"
+authors = ["Simon Ahn <simon@spoonradio.co>"]
+edition = "2018"
+
+[features]
+default = []
+async = ["tokio"]
+
+[dependencies]
+thiserror = "^1.0"
+byteorder = "1"
+bytes = "0.5"
+num-rational = "0.3"
+
+[dependencies.tokio]
+version = "0.2"
+default-features = false
+optional = true
+features = ["macros", "io-util", "fs"]

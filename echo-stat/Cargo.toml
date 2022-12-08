@@ -1,0 +1,21 @@
+[package]
+name = "echo-stat"
+version = "2.4.0"
+authors = ["Spoon Radio <simon@spoonradio.co>"]
+edition = "2018"
+
+[dependencies]
+log = "^0.4"
+serde = { version = "^1.0" ,  features = ["derive"] }
+serde_json = "1.0"
+warp = { version = "0.2.5" ,  default-features = false }
+sysinfo = "0.15.1"
+chrono = { version = "0.4" ,  features = ["serde"] }
+
+echo-types = { version = "2.4.0" ,  path = "../echo-types" }
+echo-core = { version = "2.4.0" ,  path = "../echo-core" }
+
+[dependencies.tokio]
+version = "0.2.21"
+default-features = false
+features = ["time"]

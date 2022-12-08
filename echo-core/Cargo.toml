@@ -1,0 +1,25 @@
+[package]
+name = "echo-core"
+version = "2.4.0"
+authors = ["spoon Radio <simon@spoonradio.co>"]
+edition = "2018"
+
+[dependencies]
+anyhow = "^1.0"
+log = "^0.4"
+thiserror = "^1.0"
+
+actix-rt = "1.0.0"
+
+config = "0.10"
+serde = { version = "1.0" ,  features = ["derive"] }
+
+rand = "0.7"
+lru_time_cache = "0.11"
+
+echo-types = { version = "2.4.0" ,  path = "../echo-types" }
+
+[dependencies.tokio]
+version = "0.2.21"
+default-features = false
+features = ["rt-core" ,  "sync"]

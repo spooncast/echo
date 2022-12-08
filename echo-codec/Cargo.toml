@@ -1,0 +1,19 @@
+[package]
+name = "echo-codec"
+version = "2.4.0"
+authors = ["Spoon Radio <simon@spoonradio.co>"]
+edition = "2018"
+
+[features]
+default = []
+mpegts = ["mpeg2ts"]
+
+[dependencies]
+bytes = "^0.5"
+log = "^0.4"
+thiserror = "^1.0"
+mpeg2ts = { version = "0.1" ,  optional = true }
+
+echo-types = { version = "2.4.0" ,  path = "../echo-types" }
+
+

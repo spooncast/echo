@@ -1,0 +1,27 @@
+[package]
+name = "echo-hls"
+version = "2.4.0"
+authors = ["Simon Ahn <simon@spoonradio.co>"]
+edition = "2018"
+
+[dependencies]
+log = "^0.4"
+anyhow = "^1.0"
+serde = { version = "^1.0" ,  features = ["derive"] }
+chrono = "^0.4"
+tempfile = "3.1"
+warp = { version = "0.2.5" ,  default-features = false }
+
+echo-types = { version = "2.4.0" ,  path = "../echo-types" }
+echo-core = { version = "2.4.0" ,  path = "../echo-core" }
+m3u8-rs = { version = "1.0.6", path = "../m3u8-rs" }
+
+[dependencies.echo-codec]
+version = "2.4.0"
+features = ["mpegts"]
+path = "../echo-codec"
+
+[dependencies.tokio]
+version = "0.2.21"
+default-features = false
+features = ["rt-core" ,  "stream" ,  "sync" ,  "time" ,  "io-util" ,  "fs" ,  "macros"]

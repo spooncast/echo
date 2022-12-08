@@ -1,0 +1,8 @@
+[package]
+name = "m3u8-rs"
+version = "1.0.6"
+authors = ["Simon Ahn <simon@spoonradio.co>"]
+edition = "2018"
+
+[dependencies]
+nom = "5.1.0"

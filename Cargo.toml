@@ -1,0 +1,12 @@
+[workspace]
+members = [
+        "echo-server" , 
+        "echo-types" ,  "echo-core" ,  "echo-codec" , 
+        "echo-transfer" ,  "echo-rtmp" , 
+        "echo-hls" ,  "echo-record" , "echo-stat" , 
+         "srt-rs/srt-tokio"
+        ]
+
+exclude = [
+        "scripts/spoon-mock"
+        ]

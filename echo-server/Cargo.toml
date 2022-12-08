@@ -1,0 +1,32 @@
+[package]
+name = "echo-server"
+version = "2.4.0"
+authors = ["Spoon Radio <simon@spoonradio.co>"]
+edition = "2018"
+
+[features]
+default = ["rtmp", "record", "stat"]
+rtmp = ["echo-rtmp"]
+record = ["echo-record"]
+stat = ["echo-stat"]
+
+[dependencies]
+anyhow = "^1.0"
+log = "^0.4"
+log4rs = "0.13"
+actix-rt = "1.0.0"
+git-version = "0.3.4"
+
+echo-types = { version = "2.4.0", path = "../echo-types" }
+echo-codec = { version = "2.4.0", path = "../echo-codec" }
+echo-core = { version = "2.4.0", path = "../echo-core" }
+echo-transfer = { version = "2.4.0", path = "../echo-transfer" }
+echo-hls = { version = "2.4.0", path = "../echo-hls" }
+echo-rtmp = { version = "2.4.0", path = "../echo-rtmp", optional = true }
+echo-record = { version = "2.4.0", path = "../echo-record", optional = true }
+echo-stat = { version = "2.4.0", path = "../echo-stat", optional = true }
+
+[dependencies.tokio]
+version = "0.2"
+default-features = false
+features = ["rt-threaded", "macros", "time"]

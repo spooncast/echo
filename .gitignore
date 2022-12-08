@@ -1,0 +1,4 @@
+/target
+**/*.rs.bk
+srt-rs/**/target
+echo*/target
