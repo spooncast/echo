@@ -99,12 +99,13 @@ Once you have built a RUST build environment on your system, you can run the Ech
 
 ### Build Test SRT Client
 ```
-cd scripts/echo-client 
+cd scripts
 ./test-build.sh
 ```
 
 ### Send SRT
 ```
+cd scripts/echo-client 
 ./echo-publish.sh 127.0.0.1 demo clip.aac 
 ```
 
