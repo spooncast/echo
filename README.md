@@ -1,5 +1,7 @@
 # Echo Project
 
+https://spoonlivestudio.blogspot.com/2022/11/spoon-echo-project-echo-spoon.html
+
 Echo was initiated by a social network platform, Spoon Radio(https://www.spooncast.net). The main goal of this project is to develop a lightweight and scalable broadcasting server. 
 
 It is based on Apple's HLS technology enabling large-scale streaming services over CDN networks at low cost. On the other hand, DJs are allowed to publish contents via both a low-latency, reliable, open-source protocol, Secure Reliable Transport (SRT) protocol and Adobe's RTMP protocol, which is most commonly used to work with general-purpose solutions like Open Broadcaster Software (OBS, https://obsproject.com). While it is very simple to scale Echo in many ways, you can demonstrate its capabilities with OBS Studio or FFmpeg.
