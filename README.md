@@ -1,6 +1,6 @@
 # Echo Project
 
-https://spoonlivestudio.blogspot.com/2022/11/spoon-echo-project-echo-spoon.html
+https://medium.com/p/3bd1434a163a
 
 Echo was initiated by a social network platform, Spoon Radio(https://www.spooncast.net). The main goal of this project is to develop a lightweight and scalable broadcasting server. 
 
