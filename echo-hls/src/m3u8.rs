@@ -47,17 +47,17 @@ impl Playlist {
         P: Into<PathBuf> , 
     {
         let mut tar_dur = target_duration.as_millis() as u64;
-        log::warn!("=== target duration {}", tar_dur);
         tar_dur = if tar_dur < 1000 {
             log::warn!("target duration is smaller than 1 second");
             1000
-        } else if tar_dur > 2000 {
-            log::warn!("target duration is larger than 2 seconds");
-            2000
+        } else if tar_dur > 8000 {
+            log::warn!("target duration is larger than 8 seconds");
+            8000
         } else {
-            // 1000 <= tar_dur && tar_dur <= 2000
+            // 1000 <= tar_dur && tar_dur <= 8000
             tar_dur
         };
+        log::warn!("hls target duration {}", tar_dur);
 
         let playlist_duration = Duration::from_millis(12_000 * 1000 / tar_dur);
         let playlist_min_duration = Duration::from_millis(6_000 * 1000 / tar_dur);

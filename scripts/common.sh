@@ -147,7 +147,7 @@ export ECHO_SRT_LATENCY=0.2
 
 export HLS_ENABLED=1
 export HLS_ROOT_DIR=$OUTPUT_DIR
-export HLS_TARGET_DURATION=1
+export HLS_TARGET_DURATION=4
 export HLS_PREROLE_DIR=`(cd "${TOP_DIR}/../prerole"; pwd)`
 
 # TS http downloader process
