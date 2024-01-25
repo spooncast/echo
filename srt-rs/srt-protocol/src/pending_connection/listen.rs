@@ -2,7 +2,7 @@ use std::net::SocketAddr;
 
 use crate::packet::*;
 use crate::protocol::TimeStamp;
-use crate::{ConnectionSettings ,  SocketID};
+use crate::ConnectionSettings;
 
 use super::{cookie::gen_cookie ,  hsv5::gen_hsv5_response ,  ConnInitSettings ,  ConnectError};
 use ConnectError::*;
@@ -15,8 +15,6 @@ pub struct Listen {
 
 #[derive(Clone)]
 pub struct ConclusionWaitState {
-    timestamp: TimeStamp , 
-    from: (SocketAddr ,  SocketID) , 
     cookie: i32 , 
     induction_response: Packet , 
 }
@@ -72,8 +70,6 @@ impl Listen {
                 // save induction message for potential later retransmit
                 let save_induction_response = induction_response.clone();
                 self.state = ConclusionWait(ConclusionWaitState {
-                    timestamp , 
-                    from: (from ,  shake.socket_id) , 
                     cookie , 
                     induction_response: save_induction_response , 
                 });
